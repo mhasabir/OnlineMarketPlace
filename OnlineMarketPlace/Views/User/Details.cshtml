@@ -1,0 +1,67 @@
+﻿@model DataLayer.User
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Details</title>
+</head>
+<body>
+    <fieldset>
+        <legend>User</legend>
+    
+        <div class="display-label">
+             @Html.DisplayNameFor(model => model.Name)
+        </div>
+        <div class="display-field">
+            @Html.DisplayFor(model => model.Name)
+        </div>
+    
+        <div class="display-label">
+             @Html.DisplayNameFor(model => model.User_Name)
+        </div>
+        <div class="display-field">
+            @Html.DisplayFor(model => model.User_Name)
+        </div>
+    
+        <div class="display-label">
+             @Html.DisplayNameFor(model => model.Password)
+        </div>
+        <div class="display-field">
+            @Html.DisplayFor(model => model.Password)
+        </div>
+    
+        <div class="display-label">
+             @Html.DisplayNameFor(model => model.Email)
+        </div>
+        <div class="display-field">
+            @Html.DisplayFor(model => model.Email)
+        </div>
+    
+        <div class="display-label">
+             @Html.DisplayNameFor(model => model.Mobile)
+        </div>
+        <div class="display-field">
+            @Html.DisplayFor(model => model.Mobile)
+        </div>
+    
+        <div class="display-label">
+             @Html.DisplayNameFor(model => model.Location)
+        </div>
+        <div class="display-field">
+            @Html.DisplayFor(model => model.Location)
+        </div>
+    
+    </fieldset>
+    <p>
+        @Html.ActionLink("Edit", "Edit", new { id=Model.Id }) |
+        @Html.ActionLink("Back to List", "Index")
+        @Html.ActionLink("Log Out", "LogOff")
+    </p>
+</body>
+</html>

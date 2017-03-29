@@ -1,0 +1,17 @@
+﻿@model DataLayer.User
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Admin Index</h2>
+<div>
+    @Html.ActionLink("User List", "UserList")
+    @Html.ActionLink("Admin Profile", "Details")
+    @Html.ActionLink("Admin Edit", "Edit")
+    @Html.ActionLink("Product", "List","Product")
+    @Html.ActionLink("Category", "List","Category")
+    @Html.ActionLink("Log Out", "LogOff")
+
+</div>
+

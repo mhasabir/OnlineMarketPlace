@@ -1,0 +1,50 @@
+﻿@model DataLayer.User
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Login</title>
+</head>
+<body>
+    @using (Html.BeginForm()) {
+        @Html.ValidationSummary(true)
+    
+        <fieldset>
+            <legend>User</legend>
+    
+
+    
+            <div class="editor-label">
+                @Html.LabelFor(model => model.User_Name)
+            </div>
+            <div class="editor-field">
+                @Html.EditorFor(model => model.User_Name)
+                @Html.ValidationMessageFor(model => model.User_Name)
+            </div>
+    
+            <div class="editor-label">
+                @Html.LabelFor(model => model.Password)
+            </div>
+            <div class="editor-field">
+                @Html.EditorFor(model => model.Password)
+                @Html.ValidationMessageFor(model => model.Password)
+            </div>
+    
+                @ViewBag.Message
+            <p>
+                <input type="submit" value="Login" />
+            </p>
+        </fieldset>
+    }
+    
+    <div>
+        @Html.ActionLink("Back to Home", "Index")
+    </div>
+</body>
+</html>

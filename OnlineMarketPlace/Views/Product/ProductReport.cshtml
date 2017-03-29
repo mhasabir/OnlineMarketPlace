@@ -1,0 +1,48 @@
+﻿@model DataLayer.Product
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>ProductReport</title>
+</head>
+<body>
+    <div>
+        @Html.Label("Quantity")
+        @ViewBag.quantity
+
+
+    </div>
+     <div>
+
+       @Html.Label("Total Sold in numbers")
+        @ViewBag.totalSold
+
+    </div>
+    <div>
+
+       @Html.Label("Total Price")
+        @ViewBag.totalSoldPrice
+
+    </div>
+      <div>
+
+       @Html.Label("User Who Purchsed This Product")
+          
+        @foreach (var item in ViewBag.userlist) { 
+        <div>
+
+          item
+
+        </div>
+        }|
+
+    </div>
+    @Html.ActionLink("Log Out", "LogOff","Admin")
+</body>
+</html>
